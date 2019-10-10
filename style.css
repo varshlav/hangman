@@ -1,0 +1,75 @@
+body {
+    background-image: url("desert1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.title{
+    display: inline-block;
+    font-size: 30px;
+    color: #d28e5a;
+    padding-bottom: 30px;
+}
+
+.left {
+    display: inline-block;
+float:right;
+    font-size: 30px;
+    color: #d28e5a;
+}
+
+.center {
+    display: inline-block;
+
+
+    height: 200px;
+}
+
+.right {
+    display: inline-block;
+    width: 214px;
+    border: 1px solid black;
+    height: 200px;
+    background-image: url("https://www.oligalma.com/downloads/images/hangman/hangman/0.jpg");
+background-size: contain;
+    background-repeat: no-repeat;
+    float: left;
+    height: 372px;
+}
+
+.eachword {
+
+    margin: 5px;
+    top: 30px;
+    padding: 5px;
+    position: relative;
+    font-size: 30px;
+}
+
+.topmain {
+    text-align: center;
+}
+
+.keyboard {
+
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.bottommain{
+    width: 76%;
+}
+
+.keyboard button{
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 33%;
+    border-color: blue;
+}
+
+.keyboard button:disabled{
+    border-color: grey;
+}
+
+
