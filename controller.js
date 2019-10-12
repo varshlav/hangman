@@ -45,17 +45,18 @@ function guessing(char, callback) {
         countdown--;
         score = score - 5;
         if (countdown === 5) {
-            hangmanImage[0].style.backgroundImage = "url('https://www.oligalma.com/downloads/images/hangman/hangman/2.jpg')";
+            //hangmanImage[0].style.backgroundImage = "url('https://www.oligalma.com/downloads/images/hangman/hangman/2.jpg')";
+            hangmanImage[0].style.backgroundImage = "url('2.jpg')";
         } else if (countdown === 4) {
-            hangmanImage[0].style.backgroundImage = "url('https://www.oligalma.com/downloads/images/hangman/hangman/5.jpg')";
+            hangmanImage[0].style.backgroundImage = "url('5.jpg')";
         } else if (countdown === 3) {
-            hangmanImage[0].style.backgroundImage = "url('https://www.oligalma.com/downloads/images/hangman/hangman/6.jpg')";
+            hangmanImage[0].style.backgroundImage = "url('6.jpg')";
         } else if (countdown === 2) {
-            hangmanImage[0].style.backgroundImage = "url('https://www.oligalma.com/downloads/images/hangman/hangman/8.jpg')";
+            hangmanImage[0].style.backgroundImage = "url('8.jpg')";
         } else if (countdown === 1) {
-            hangmanImage[0].style.backgroundImage = "url('https://www.oligalma.com/downloads/images/hangman/hangman/9.jpg')";
+            hangmanImage[0].style.backgroundImage = "url('9.jpg')";
         } else if (countdown === 0) {
-            hangmanImage[0].style.backgroundImage = "url('https://www.oligalma.com/downloads/images/hangman/hangman/10.jpg')";
+            hangmanImage[0].style.backgroundImage = "url('10.jpg')";
             callback(0);
         }
     }
