@@ -5,16 +5,19 @@ body {
 }
 .title{
     display: inline-block;
-    font-size: 30px;
-    color: #d28e5a;
+    font-size: 60px;
+    color: #f55f5f;
     padding-bottom: 30px;
+    text-decoration: underline orange;
 }
+
 
 .left {
     display: inline-block;
 float:right;
     font-size: 30px;
-    color: #d28e5a;
+    color: #f55f5f;
+    text-decoration: overline orange;
 }
 
 .center {
@@ -53,7 +56,8 @@ background-color: white;
 }
 
 .keyboard {
-
+    font-size: 30px;
+    color: #140080;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -70,6 +74,7 @@ background-color: white;
     font-size: 20px;
     border-radius: 33%;
     border-color: blue;
+
 }
 
 .keyboard button:disabled{

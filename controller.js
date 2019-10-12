@@ -14,21 +14,18 @@ let position = -1;
 var eachword, hangmanImage;
 
 window.onload = function () {
-    var guessDiv = document.getElementsByClassName("center");
+    const guessDiv = document.getElementsByClassName("center");
 
     hangmanImage = document.getElementsByClassName("right");
 
     for (let i = 0; i < word.length; i++) {
-        var newDiv = document.createElement('span');
+        const newDiv = document.createElement('span');
         newDiv.className = "eachword";
         newDiv.innerHTML = " _ ";
         guessDiv[0].appendChild(newDiv);
-
     }
-
     eachword = document.getElementsByClassName("eachword");
 };
-
 
 //eachword[0].innerHTML = "K";
  function guessword(char){
@@ -44,7 +41,6 @@ function guessing(char, callback) {
             position = word.indexOf(char, position + 1);
             eachword[position].innerHTML = char;
         }
-
     } else {
         countdown--;
         score = score - 5;
@@ -62,15 +58,16 @@ function guessing(char, callback) {
             hangmanImage[0].style.backgroundImage = "url('https://www.oligalma.com/downloads/images/hangman/hangman/10.jpg')";
             callback(0);
         }
-
     }
     if (wordcount === word.length) {
         score = score + 50;
         setTimeout(function(){
-            alert("You won this Game")
+            alert("You won this Game");
+            let keyboard = document.getElementsByClassName('keyboard');
+            keyboard[0].innerHTML = "Congratulations !!!";
         }, 200);
     }
-document.getElementById('score').innerText = "score = "+score;
+    document.getElementById('score').innerText = "score = "+score;
 }
 
 function displayAlert(cdown){
