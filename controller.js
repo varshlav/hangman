@@ -5,8 +5,14 @@ var dictionary = ['WINTER', 'SPRINTERS', 'MOBILE', 'APARTMENT','BICYCLE'];
 
 let countdown = 6;
 let wordcount = 0;
-let score = 0;
-
+let score;
+if(sessionStorage.getItem('hangmanScore')){
+    score = sessionStorage.getItem('hangmanScore');
+} else {
+    score = 0;
+}
+score = Number(score);
+document.getElementById('score').innerText = "score = "+score;
 let rand = Math.floor(Math.random() * 5);
 
 let word = dictionary[rand];
@@ -46,17 +52,18 @@ function guessing(char, callback) {
         score = score - 5;
         if (countdown === 5) {
             //hangmanImage[0].style.backgroundImage = "url('https://www.oligalma.com/downloads/images/hangman/hangman/2.jpg')";
-            hangmanImage[0].style.backgroundImage = "url('2.jpg')";
+            hangmanImage[0].style.backgroundImage = "url('hangman2.png')";
         } else if (countdown === 4) {
-            hangmanImage[0].style.backgroundImage = "url('5.jpg')";
+            hangmanImage[0].style.backgroundImage = "url('hangman3.png')";
         } else if (countdown === 3) {
-            hangmanImage[0].style.backgroundImage = "url('6.jpg')";
+            hangmanImage[0].style.backgroundImage = "url('hangman4.png')";
         } else if (countdown === 2) {
-            hangmanImage[0].style.backgroundImage = "url('8.jpg')";
+            hangmanImage[0].style.backgroundImage = "url('hangman5.png')";
         } else if (countdown === 1) {
-            hangmanImage[0].style.backgroundImage = "url('9.jpg')";
+            hangmanImage[0].style.backgroundImage = "url('hangman6.png')";
         } else if (countdown === 0) {
-            hangmanImage[0].style.backgroundImage = "url('10.jpg')";
+            hangmanImage[0].style.backgroundImage = "url('hangman7.png')";
+            sessionStorage.setItem('hangmanScore', 0);
             callback(0);
         }
     }
@@ -66,6 +73,7 @@ function guessing(char, callback) {
             alert("You won this Game");
             let keyboard = document.getElementsByClassName('keyboard');
             keyboard[0].innerHTML = "Congratulations !!!";
+            sessionStorage.setItem('hangmanScore', score);
         }, 200);
     }
     document.getElementById('score').innerText = "score = "+score;
