@@ -1,4 +1,4 @@
-let alphabets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+//let alphabets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
 var dictionary = ['WINTER', 'SPRINTERS', 'MOBILE', 'APARTMENT','BICYCLE'];
 
@@ -70,7 +70,7 @@ function guessing(char, callback) {
     if (wordcount === word.length) {
         score = score + 50;
         setTimeout(function(){
-            alert("You won this Game");
+            showModal();
             let keyboard = document.getElementsByClassName('keyboard');
             keyboard[0].innerHTML = "Congratulations !!!";
             sessionStorage.setItem('hangmanScore', score);
@@ -86,10 +86,12 @@ function displayAlert(cdown){
     }
 }
 
+const modal = document.getElementById('modal');
+function showModal(){
+    modal.style.display = "block";
+}
 
 
-
-
-
-
-
+function closeModal(){
+    modal.style.display = "none";
+}
