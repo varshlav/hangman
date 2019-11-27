@@ -35,7 +35,7 @@ window.onload = function () {
 
 const alphaSet = new Set();
 document.addEventListener('keydown', event => {
-    if(!alphaSet.has(event.keyCode) && event.keyCode > 64 && event.keyCode < 91){
+    if(wordcount !== word.length && !alphaSet.has(event.keyCode) && event.keyCode > 64 && event.keyCode < 91){
         guessword(event.code[3]);
         alphaSet.add(event.keyCode);
         document.getElementById(event.code[3]).disabled = true;
